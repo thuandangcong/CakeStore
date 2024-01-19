@@ -1,0 +1,101 @@
+﻿@{
+    var status = Context.Request.Query["status"];
+    var pending = "text-primary";
+    var cancelled = "text-primary";
+    var paymentPending = "text-primary";
+    var requestCancel = "text-primary";
+    var shipping = "text-primary";
+    var inprocess = "text-primary";
+    var completed = "text-primary";
+    var approved = "text-primary";
+    var all = "text-primary";
+
+    switch (status)
+    {
+        case "pending":
+            pending = "active text-white bg-primary";
+            break;
+        case "paymentPending":
+            paymentPending = "active text-white bg-primary";
+            break;
+        case "inprocess":
+            inprocess = "active text-white bg-primary";
+            break;
+        case "requestCancel":
+            requestCancel = "active text-white bg-primary";
+            break;
+        case "cancelled":
+            cancelled = "active text-white bg-primary";
+            break;
+        case "completed":
+            completed = "active text-white bg-primary";
+            break;
+        case "shipping":
+            shipping = "active text-white bg-primary";
+            break;
+        case "approved":
+            approved = "active text-white bg-primary";
+            break;
+        default:
+            all = "active text-white bg-primary";
+            break;
+
+    }
+
+}
+
+
+
+        <div class="d-flex justify-content-between pb-5 pt-2">
+            <span></span>
+            <ul class="list-group list-group-horizontal-sm">
+                
+                
+                <a style="text-decoration:none;" asp-controller="Order" asp-action="Index" asp-route-status="cancelled">
+                <li class="list-group-item p-2 @cancelled">Cancelled</li>
+                </a>
+                <a style="text-decoration:none;" asp-controller="Order" asp-action="Index" asp-route-status="requestCancel">
+        <li class="list-group-item p-2 @requestCancel">Request Cancel</li>
+                </a>
+                <a style="text-decoration:none;" asp-controller="Order" asp-action="Index" asp-route-status="completed">
+        <li class="list-group-item p-2 @completed">Completed</li>
+                </a>
+                <a style="text-decoration:none;" asp-controller="Order" asp-action="Index" asp-route-status="shipping">
+        <li class="list-group-item p-2 @shipping">In Shipping</li>
+                </a>
+                <a style="text-decoration:none;" asp-controller="Order" asp-action="Index" asp-route-status="inprocess">
+        <li class="list-group-item p-2 @inprocess">In Process</li>
+                </a>
+                <a style="text-decoration:none;" asp-controller="Order" asp-action="Index" asp-route-status="approved">
+        <li class="list-group-item p-2 @approved">Approved</li>
+                </a>
+                <a style="text-decoration:none;" asp-controller="Order" asp-action="Index" asp-route-status="paymentPending">
+        <li class="list-group-item p-2 @paymentPending">Payment Pending</li>
+                </a>
+                <a style="text-decoration:none;" asp-controller="Order" asp-action="Index" asp-route-status="pending">
+        <li class="list-group-item p-2 @pending">Order Pending</li>
+                </a>
+                <a style="text-decoration:none;" asp-controller="Order" asp-action="Index" asp-route-status="all">
+        <li class="list-group-item p-2 @all">All</li>
+                </a>
+            </ul>
+        </div>
+        <table id="tblData" class="table table-ms table-bordered table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>Order Date</th>
+                    <th>Order Status</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+        </table>
+
+
+@section Scripts {
+    <script src="~/js/order.js"></script>
+}

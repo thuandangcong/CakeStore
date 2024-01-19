@@ -1,0 +1,19 @@
+﻿@using X.PagedList.Mvc.Core;
+@using X.PagedList.Web.Common;
+@model X.PagedList.IPagedList<Product>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<partial name="_ProductLayOutListPartial" />
+
+@section Scripts {
+    <script>
+        function sortList() {
+
+            var selectedPage = document.getElementById("sortOption").value;
+            window.location.href = "?search=" + @ViewBag.Search + "&&orderBy=" + selectedPage + "&&page=" + @Model.PageNumber;
+
+        }
+    </script>
+}

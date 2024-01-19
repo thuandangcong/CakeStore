@@ -1,0 +1,56 @@
+﻿@model List<OrderHeader>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<main style="margin-top: 58px">
+    <div class="container pt-4">
+        <div class="card shadow border-0">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="">Order History</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+
+                <table id="tblData" class="table table-bordered table-striped" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                            <th>Order Date</th>
+                            <th>Order Status</th>
+                            <th>Total</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(var order in Model)
+                        {
+                            <tr>
+                                <td>@order.Id</td>
+                                <td>@order.Name</td>
+                                <td>@order.PhoneNumber</td>
+                                <td>@order.ApplicationUser.Email</td>
+                                <td>@order.OrderDate</td>
+                                <td>@order.OrderStatus</td>
+                               <td>@order.OrderTotal</td>
+                               <td>
+                                    <a asp-area="Customer" asp-controller="Order" asp-action="Details" asp-route-orderId="@order.Id" type="button" class="btn btn-primary btn-floating" data-mdb-ripple-init>
+                                        <i class="far fa-eye"></i>
+                                    </a>
+                               </td>
+                            </tr>
+                        }
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>

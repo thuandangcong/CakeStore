@@ -1,0 +1,30 @@
+﻿@model Brand
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<form method="post">
+    <div class="border p-3 mt-4">
+        <input asp-for="Id" hidden />
+        <div class="mb-3">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control" disabled/>
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="DisplayOrder"></label>
+            <input asp-for="DisplayOrder" class="form-control" disabled/>
+            <span asp-validation-for="DisplayOrder" class="text-danger"></span>
+
+        </div>
+        <button type="submit" class="btn btn-danger" style="width: 150px">Delete</button>
+        <a asp-controller="Brand" asp-action="Index" class="btn btn-secondary">Back to list</a>
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<partial name="_ProductLayOutListPartial" />
+@section Scripts {
+    <script>
+        function sortList() {
+            var selectedPage = document.getElementById("sortOption").value;
+            console.log(window.location.href);
+            window.location.href = "?categoryId=" + @ViewBag.CategoryId + "&&orderBy=" + selectedPage + "&&page=" + @Model.PageNumber;
+        }
+    </script>
+}

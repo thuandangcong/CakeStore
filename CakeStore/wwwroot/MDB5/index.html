@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Material Design for Bootstrap</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <!-- MDB ESSENTIAL -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <!-- MDB PLUGINS -->
+  <link rel="stylesheet" href="plugins/css/all.min.css" />
+  <!-- Custom styles -->
+  <style></style>
+</head>
+
+<body>
+  <!-- Trigger buttons -->
+  <button type="button" class="btn btn-primary" id="basic-primary-trigger" data-mdb-ripple-init>Primary</button>
+  <button type="button" class="btn btn-secondary" id="basic-secondary-trigger" data-mdb-ripple-init>Secondary</button>
+  <button type="button" class="btn btn-success" id="basic-success-trigger" data-mdb-ripple-init>Success</button>
+  <button type="button" class="btn btn-danger" id="basic-danger-trigger" data-mdb-ripple-init>Danger</button>
+  <button type="button" class="btn btn-warning" id="basic-warning-trigger" data-mdb-ripple-init>Warning</button>
+  <button type="button" class="btn btn-info" id="basic-info-trigger" data-mdb-ripple-init>Info</button>
+  <button type="button" class="btn btn-light" id="basic-light-trigger" data-mdb-ripple-init>Light</button>
+  <button type="button" class="btn btn-dark" id="basic-dark-trigger" data-mdb-ripple-init>Dark</button>
+
+  <!-- Toasts -->
+  <div class="toast fade mx-auto" id="basic-primary-example" role="alert" aria-live="assertive" aria-atomic="true"
+    data-mdb-toast-init data-mdb-autohide="true" data-mdb-delay="2000" data-mdb-position="top-right"
+    data-mdb-append-to-body="true" data-mdb-stacking="true" data-mdb-width="350px" data-mdb-color="primary">
+    <div class="toast-header">
+      <strong class="me-auto">MDBootstrap</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="btn-close" data-mdb-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">Primary Basic Example</div>
+  </div>
+
+  <div class="toast fade mx-auto" id="basic-secondary-example" role="alert" aria-live="assertive" aria-atomic="true"
+    data-mdb-toast-init data-mdb-autohide="true" data-mdb-delay="2000" data-mdb-position="top-right"
+    data-mdb-append-to-body="true" data-mdb-stacking="true" data-mdb-width="350px" data-mdb-color="secondary">
+    <div class="toast-header">
+      <strong class="me-auto">MDBootstrap</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="btn-close" data-mdb-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">Secondary Basic Example</div>
+  </div>
+
+  <div class="toast show fade mx-auto" id="basic-success-example" role="alert" aria-live="assertive" aria-atomic="true"
+    data-mdb-toast-init data-mdb-autohide="true" data-mdb-delay="2000" data-mdb-position="top-right"
+    data-mdb-append-to-body="true" data-mdb-stacking="true" data-mdb-width="350px" data-mdb-color="success">
+    <div class="toast-header">
+      <strong class="me-auto">MDBootstrap</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="btn-close" data-mdb-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">Success Basic Example</div>
+  </div>
+
+  <div class="toast show fade mx-auto end-0" id="basic-danger-example" role="alert" aria-live="assertive" aria-atomic="true"
+    data-mdb-toast-init data-mdb-autohide="true" data-mdb-delay="2000" data-mdb-position="top-right"
+    data-mdb-append-to-body="true" data-mdb-stacking="true" data-mdb-width="350px" data-mdb-color="danger">
+    <div class="toast-header">
+      <strong class="me-auto">MDBootstrap</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="btn-close" data-mdb-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">Danger Basic Example</div>
+  </div>
+
+  <div class="toast fade mx-auto" id="basic-warning-example" role="alert" aria-live="assertive" aria-atomic="true"
+    data-mdb-toast-init data-mdb-autohide="true" data-mdb-delay="2000" data-mdb-position="top-right"
+    data-mdb-append-to-body="true" data-mdb-stacking="true" data-mdb-width="350px" data-mdb-color="warning">
+    <div class="toast-header">
+      <strong class="me-auto">MDBootstrap</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="btn-close" data-mdb-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">Warning Basic Example</div>
+  </div>
+
+  <div class="toast fade mx-auto" id="basic-info-example" role="alert" aria-live="assertive" aria-atomic="true"
+    data-mdb-toast-init data-mdb-autohide="true" data-mdb-delay="2000" data-mdb-position="top-right"
+    data-mdb-append-to-body="true" data-mdb-stacking="true" data-mdb-width="350px" data-mdb-color="info">
+    <div class="toast-header">
+      <strong class="me-auto">MDBootstrap</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="btn-close" data-mdb-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">Info Basic Example</div>
+  </div>
+
+  <div class="toast fade mx-auto" id="basic-light-example" role="alert" aria-live="assertive" aria-atomic="true"
+    data-mdb-toast-init data-mdb-autohide="true" data-mdb-delay="2000" data-mdb-position="top-right"
+    data-mdb-append-to-body="true" data-mdb-stacking="true" data-mdb-width="350px" data-mdb-color="light">
+    <div class="toast-header">
+      <strong class="me-auto">MDBootstrap</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="btn-close" data-mdb-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">Light Basic Example</div>
+  </div>
+
+  <div class="toast fade mx-auto" id="basic-dark-example" role="alert" aria-live="assertive" aria-atomic="true"
+    data-mdb-toast-init data-mdb-autohide="true" data-mdb-delay="2000" data-mdb-position="top-right"
+    data-mdb-append-to-body="true" data-mdb-stacking="true" data-mdb-width="350px" data-mdb-color="dark">
+    <div class="toast-header">
+      <strong class="me-auto">MDBootstrap</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="btn-close btn-close-white" data-mdb-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">Dark Basic Example</div>
+  </div>
+  </div>
+  <!-- End your project here-->
+</body>
+
+<!-- MDB ESSENTIAL -->
+<script type="text/javascript" src="js/mdb.umd.min.js"></script>
+<!-- MDB PLUGINS -->
+<script type="text/javascript" src="plugins/js/all.min.js"></script>
+<!-- Custom scripts -->
+<script type="text/javascript">
+  const toasts = [
+    'basic-primary-example',
+    'basic-secondary-example',
+    'basic-success-example',
+    'basic-danger-example',
+    'basic-warning-example',
+    'basic-info-example',
+    'basic-light-example',
+    'basic-dark-example',
+  ];
+
+  const triggers = [
+    'basic-primary-trigger',
+    'basic-secondary-trigger',
+    'basic-success-trigger',
+    'basic-danger-trigger',
+    'basic-warning-trigger',
+    'basic-info-trigger',
+    'basic-light-trigger',
+    'basic-dark-trigger',
+  ];
+
+  triggers.forEach((trigger, index) => {
+    let basicInstance = mdb.Toast.getInstance(document.getElementById(toasts[index]));
+    document.getElementById(trigger).addEventListener('click', () => {
+      basicInstance.show();
+    });
+  });
+</script>
+
+</html>
